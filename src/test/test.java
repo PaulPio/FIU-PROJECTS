@@ -1,6 +1,6 @@
-package test;
+package src.test;
 
-import util.*;
+import src.util.*;
 
 public class test {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package util;
+package src.util;
 
 public class Gradebook {
     private Students[] listOfStudents;

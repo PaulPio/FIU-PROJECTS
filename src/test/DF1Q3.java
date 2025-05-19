@@ -1,4 +1,5 @@
-package test;
+package src.test;
+
 import java.util.Scanner;
 public class DF1Q3 {
 
@@ -12,9 +13,9 @@ public class DF1Q3 {
 
             String[] tokens = command.split(" ");
             for (int i = 0; i < tokens.length; i++) {
-                System.out.println("%d: %s\t", i, tokens[i]);
+                System.out.printf("%d: %s\t\n", i, tokens[i]);
             }
-            System.out.println("Please enter the next comand: ");
+            System.out.println("Please enter the next command: ");
 
         }
     }
