@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="6419ae76-e379-445a-9944-fe324c63010e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/FIU PROJECTS.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog java 2/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog java 2/src/checkStringc.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog java 2/src/test/DF1Q3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog java 2/src/test/test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog java 2/src/util/Gradebook.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog java 2/src/util/Students.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIU PROJECTS/src/test/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIU PROJECTS/src/test/test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIU PROJECTS/src/util/Gradebook.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIU PROJECTS/src/util/Students.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIU PROJECTS/src/util/Students.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/Gradebook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Gradebook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/Students.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Students.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +59,7 @@
   "keyToString": {
     "Application.DF1Q3.executor": "Run",
     "Application.Main.executor": "Run",
+    "Application.Test.executor": "Run",
     "Application.checkStringc.executor": "Debug",
     "Application.test.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
@@ -73,9 +75,22 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.DF1Q3">
+  <component name="RunManager" selected="Application.Test">
     <configuration name="DF1Q3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="src.test.DF1Q3" />
+      <module name="FIU PROJECTS" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="src.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.test.Test" />
       <module name="FIU PROJECTS" />
       <extension name="coverage">
         <pattern>
@@ -96,6 +111,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Test" />
         <item itemvalue="Application.DF1Q3" />
         <item itemvalue="Application.checkStringc" />
       </list>
@@ -116,32 +132,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1747698317159</updated>
-      <workItem from="1747698318472" duration="302000" />
+      <workItem from="1747698318472" duration="3228000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/DF1Q3.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/DF1Q3.java</url>
-          <line>14</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/DF1Q3.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
