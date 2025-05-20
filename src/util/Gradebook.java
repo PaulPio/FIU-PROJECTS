@@ -2,9 +2,6 @@ package src.util;
 // Source code of the program to create the Gradebook object and it's functions
 public class Gradebook {
 
-
-
-
     // Creating variables
     private Students[] listOfStudents; // Variable to store array of students
 
@@ -29,6 +26,9 @@ public class Gradebook {
 
 
    public double calculateAverageScore(){
+        /* Method to calcluate the average score of the students grades, it uses a for loop to
+        * review the student array, adds the score and at the end, it divides the total score
+        * betwen the number of students */
         double avgscore = 0, score = 0;
         for (int i = 0;i < listOfStudents.length; i++ ) {
             score += listOfStudents[i].getScore();
@@ -38,6 +38,7 @@ public class Gradebook {
    }
 
     public static String convertToLetterGrade(double score){
+        /* Static Method to convert the number grade to a letter grade using ifs statements */
         if(score >= 95){
             return "A";
         }

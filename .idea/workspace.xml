@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6419ae76-e379-445a-9944-fe324c63010e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/DF1Q4.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIU PROJECTS/src/test/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIU PROJECTS/src/test/test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIU PROJECTS/src/util/Gradebook.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIU PROJECTS/src/util/Students.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIU PROJECTS/src/util/Students.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIU PROJECTS/checkStringc.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIU PROJECTS/src/test/DF1Q3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIU PROJECTS/src/test/DF1Q3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIU PROJECTS/src/util/Gradebook.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIU PROJECTS/src/util/Gradebook.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/checkStringc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/DF1Q2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/DF1Q3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/DF1Q3.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/util/Gradebook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Gradebook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/Students.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Students.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +58,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.DF1Q2.executor": "Run",
     "Application.DF1Q3.executor": "Run",
     "Application.Main.executor": "Run",
     "Application.Test.executor": "Run",
@@ -75,7 +77,14 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Test">
+  <component name="RunManager">
+    <configuration name="DF1Q2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.test.DF1Q2" />
+      <module name="FIU PROJECTS" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DF1Q3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="src.test.DF1Q3" />
       <module name="FIU PROJECTS" />
@@ -102,18 +111,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="checkStringc" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="checkStringc" />
-      <module name="FIU PROJECTS" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Test" />
         <item itemvalue="Application.DF1Q3" />
-        <item itemvalue="Application.checkStringc" />
+        <item itemvalue="Application.DF1Q2" />
+        <item itemvalue="Application.Test" />
       </list>
     </recent_temporary>
   </component>
@@ -132,7 +134,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1747698317159</updated>
-      <workItem from="1747698318472" duration="3228000" />
+      <workItem from="1747698318472" duration="6382000" />
     </task>
     <servers />
   </component>
