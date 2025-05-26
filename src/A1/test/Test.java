@@ -1,6 +1,7 @@
-package src.test;
+package src.A1.test;
 
-import src.util.*;
+import src.DF1.util.Gradebook;
+import src.DF1.util.Students;
 
 // Program to run the Gradebook functions
 

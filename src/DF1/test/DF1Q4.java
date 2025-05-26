@@ -1,4 +1,4 @@
-package src.test;
+package src.DF1.test;
 //Write a Java program that stores the content of the following table in a twoD array of integer
 
 public class DF1Q4 {

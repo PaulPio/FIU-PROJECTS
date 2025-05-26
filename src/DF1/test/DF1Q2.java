@@ -1,4 +1,4 @@
-package src.test;
+package src.DF1.test;
 /*
  Java static method that receives a
  String as its input parameter and returns true if the given string starts with a capital letter

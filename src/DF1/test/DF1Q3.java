@@ -1,4 +1,4 @@
-package src.test;
+package src.DF1.test;
 /*
 Write a Java program that (1) receives multiple lines from System.in, (2) split each
 line into its participating words (use String.split method), and (3)

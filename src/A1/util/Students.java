@@ -1,4 +1,4 @@
-package src.util;
+package src.A1.util;
 // Source code of program to create the Students object
 public class Students {
     // Declaring variables for the object attributes

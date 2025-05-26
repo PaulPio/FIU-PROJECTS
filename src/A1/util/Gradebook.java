@@ -1,4 +1,5 @@
-package src.util;
+package src.A1.util;
+
 // Source code of the program to create the Gradebook object and it's functions
 public class Gradebook {
 
