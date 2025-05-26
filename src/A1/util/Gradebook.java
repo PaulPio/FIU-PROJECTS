@@ -15,12 +15,12 @@ public class Gradebook {
     };
 
     public void tabulateStudentsInfo(){
-        /* Function to print the students info */
+        /* Method to print the students info */
 
         System.out.printf("%-12s\t%-12s\t%-12s\t%-10s%n", "First","Last","PID","Score");
 
         for(Students student : listOfStudents){
-            System.out.printf("%-12s\t%-12s\t%-12d\t%-10d%n", student.getFirstName(), student.getLastName(), student.getPantherID(), student.getScore());
+            System.out.printf("%-12s\t%-12s\t%-12d\t%-10d%n", student.getFirstName(), student.getLastName(), student.getPid(), student.getGrade());
         }
 
     }
@@ -32,40 +32,11 @@ public class Gradebook {
         * betwen the number of students */
         double avgscore = 0, score = 0;
         for (int i = 0;i < listOfStudents.length; i++ ) {
-            score += listOfStudents[i].getScore();
+            score += listOfStudents[i].getGrade();
         }
         avgscore = score / listOfStudents.length;
         return avgscore;
    }
 
-    public static String convertToLetterGrade(double score){
-        /* Static Method to convert the number grade to a letter grade using ifs statements */
-        if(score >= 95){
-            return "A";
-        }
-        if(score >= 90){
-            return "A-";
-        }
-        if(score >= 87){
-            return "B+";
-        }
-        if(score >= 83){
-            return "B";
-        }
-        if(score >= 80){
-            return "B-";
-        }
-        if(score >= 77){
-            return "C+";
-        }
-        if(score >= 70){
-            return "C";
-        }
-        if(score >= 60){
-            return "D";
-        }
-        else {
-            return "F";
-        }
-    }
+
 }
