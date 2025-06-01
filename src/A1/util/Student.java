@@ -1,6 +1,6 @@
 package src.A1.util;
 // Source code of program to create the Students object
-public class Students {
+public class Student {
 
     // Declaring variables for the object attributes
     private String firstName; // Student first name
@@ -34,7 +34,7 @@ public class Students {
 
 
 
-    public Students(String firstName, String lastName, int pid, Grade grade) {
+    public Student(String firstName, String lastName, int pid, Grade grade) {
         /* Constructor of the Student object, it requests the attributes of the Student to create the object */
         this.firstName = firstName;
         this.lastName = lastName;
