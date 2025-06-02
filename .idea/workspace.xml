@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6419ae76-e379-445a-9944-fe324c63010e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/DF2/test/DF2Q1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DF2/util/Gradebook.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DF2/util/Students.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIU PROJECTS/src/A1/test/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIU PROJECTS/src/A1/test/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIU PROJECTS/src/A1/util/Gradebook.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIU PROJECTS/src/A1/util/Gradebook.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/A1/test/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/A1/test/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/A1/util/Gradebook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/A1/util/Gradebook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/A1/util/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/A1/util/Student.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +70,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Paul P/Documents/FIU/FIU PROJECTS/src/A1/util",
+    "last_opened_file_path": "C:/Users/Paul P/Documents/FIU/FIU PROJECTS/src/DF2/util",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -83,6 +81,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Paul P\Documents\FIU\FIU PROJECTS\src\DF2\util" />
       <recent name="C:\Users\Paul P\Documents\FIU\FIU PROJECTS\src\A1\util" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -125,9 +124,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Test" />
         <item itemvalue="Application.DF1Q2" />
         <item itemvalue="Application.DF1Q3" />
-        <item itemvalue="Application.Test" />
       </list>
     </recent_temporary>
   </component>
@@ -152,7 +151,8 @@
       <workItem from="1748216629417" duration="345000" />
       <workItem from="1748270227533" duration="5385000" />
       <workItem from="1748730619641" duration="9119000" />
-      <workItem from="1748818882352" duration="8916000" />
+      <workItem from="1748818882352" duration="9591000" />
+      <workItem from="1748872397095" duration="693000" />
     </task>
     <servers />
   </component>
