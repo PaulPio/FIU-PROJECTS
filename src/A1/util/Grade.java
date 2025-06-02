@@ -20,8 +20,6 @@ public class Grade {
         this.letterGrade = Grade.convertToLetterGrade(score);/**/
     }
 
-
-
     public static String convertToLetterGrade(double score){
         /* Static Method to convert the number grade to a letter grade using ifs statements */
         if(score >= 95){

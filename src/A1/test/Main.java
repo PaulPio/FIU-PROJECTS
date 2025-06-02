@@ -107,7 +107,6 @@ public class Main {
                 continue; // continue makes the loop to start again
             }
 
-
             // Assigning the values of the Student attributes
             // First, we assigg the values of the user input to their variable before creating the Student object
 
@@ -156,22 +155,71 @@ public class Main {
         while(true){ // command handling phase
             System.out.print("Please enter a new command. ");
             String command = keyboard.nextLine();
+
+            // Command to end program
             if (command.equals("quit")){
                 break;
             }
+            // Command to calculate Median Score
             else if (command.equalsIgnoreCase("median score")){
-                System.out.println("Median is " + gradebook.calculateMedian());
-            } else if (command.equalsIgnoreCase("median letter")) {
-                double medianScore = gradebook.calculateMedian();
+                System.out.println("Median is " + gradebook.calculateMedianScore());
+            }
+            // Command to calculate Median Letter Grade. It uses the calculate median score method to get the score
+            // and the uses the convertToLetterGrade to get the median letter value of the score
+            else if (command.equalsIgnoreCase("median letter")) {
+                double medianScore = gradebook.calculateMedianScore();
                 String letter = Grade.convertToLetterGrade(medianScore);
                 System.out.println("Median letter is " + letter);
-            } else if (command.startsWith("name ")) {
-                String [] commandTokens = command.split(" ");
-                int givenID = Integer.parseInt(commandTokens[1]);
-                gradebook.getFullName(givenID);
+            }
+            // Command to get the full name of the student using the student id.
+            // Creating an array of string, separating the elements through the spaces
+            // between words to get the student id
+            else if (command.startsWith("name ")) {
+                String [] commandTokens = command.split(" "); // Splitting the user typed string into an array
+                int givenID = Integer.parseInt(commandTokens[1]); // Student id
                 System.out.println("The full name is " + gradebook.getFullName(givenID));
-
-            } else
+            }
+            // Command to get the minimum score
+            else if (command.equalsIgnoreCase("min score")) {
+                System.out.println("Minimum score is " + gradebook.getMinScore());
+            } // Command to get the maximum score
+            else if (command.equalsIgnoreCase("max score")) {
+                System.out.println("Maximum score is " + gradebook.getMaxScore());
+            }
+            // Command to get the maximum letter grade
+            else if (command.equalsIgnoreCase("max letter")) {
+                System.out.println("Maximum letter grade is " + gradebook.getMaxLetter());
+            }
+            // Command to get the minimum letter grade
+            else if (command.equalsIgnoreCase("min letter")) {
+                System.out.println("Maximum score is " + gradebook.getMinLetter());
+            }
+            // Command to get change the grade of the student. First we get the student id and the new grade by
+            // splitting the string in an array
+            else if (command.startsWith("change ")) {
+                String [] commandTokens = command.split(" "); // Splitting the user typed string into an array
+                int givenID = Integer.parseInt(commandTokens[1]); // Student id
+                Grade givenScore = new Grade (Integer.parseInt(commandTokens[2])); // New grade object
+                System.out.println("New score is " + gradebook.changeGrade(givenID, givenScore));
+            }
+            //Command to get the average letter grade
+            else if (command.equalsIgnoreCase("average letter")) {
+                System.out.println("Average Letter Grade  is " + gradebook.calculateAverageLetterGrade());
+            }
+            //Command to get the average score
+            else if (command.equalsIgnoreCase("average score")) {
+                System.out.println("Average score  is " + gradebook.calculateAverageScore());
+            }
+            // Command to tabulate the students scores
+            else if (command.equalsIgnoreCase("tab score")) {
+                gradebook.tabulateScores();
+            }
+            // Command to tabulate the students letter grades
+            else if (command.startsWith("tab letters")) {
+                gradebook.tabulateLetterGrade();
+            }
+            // Error message
+            else
                 System.out.println("Illegal command. Please try again.");
         }
 

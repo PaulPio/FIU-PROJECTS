@@ -7,16 +7,9 @@
     <list default="true" id="6419ae76-e379-445a-9944-fe324c63010e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FIU PROJECTS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIU PROJECTS/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIU PROJECTS/src/test/DF1Q2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIU PROJECTS/src/test/DF1Q3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIU PROJECTS/src/test/DF1Q4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIU PROJECTS/src/test/test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIU PROJECTS/src/util/Gradebook.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIU PROJECTS/src/util/Students.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/A1/test/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/A1/test/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/A1/test/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/A1/util/Grade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/A1/util/Grade.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/A1/util/Gradebook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/A1/util/Gradebook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/A1/util/Students.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/A1/util/Student.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +41,9 @@
     &quot;accountId&quot;: &quot;bd8e5cbf-10c0-4b17-afbf-0b7ebdb5d34a&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/A1/util/Gradebook.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 0
@@ -154,7 +150,8 @@
       <workItem from="1747849223607" duration="599000" />
       <workItem from="1748216629417" duration="345000" />
       <workItem from="1748270227533" duration="5385000" />
-      <workItem from="1748730619641" duration="8919000" />
+      <workItem from="1748730619641" duration="9119000" />
+      <workItem from="1748818882352" duration="6318000" />
     </task>
     <servers />
   </component>
