@@ -33,7 +33,6 @@ public class Gradebook {
 
     }
 
-
     public void tabulateLetterGrade(){
         /* Method to print the students info with the letter grade */
 
@@ -82,10 +81,12 @@ public class Gradebook {
    public double calculateMedianScore(){
         /* Method to calculate the Median of the Students scores */
         int i = 0, n = listOfStudents.size();
-        int [] scores = new int[n];
+        int [] scores = new int[n]; // Array withe lenght of the number of students in gradebook
+       //Enhance for loop to go through the students in the gradebook and add their scores in int array
         for (Student s : listOfStudents) {
             scores[i++] = s.getGrade().getScore();
         }
+        // sorting the scores in the array
         Arrays.sort(scores);
         if (n % 2 == 0)
             return (scores [n/2]+scores[n/2-1])/2.0;
@@ -105,7 +106,7 @@ public class Gradebook {
    public String changeGrade(int givenID, Grade newGrade){
         /* Method to change the student grade */
        // Enhance for loop that check for PID that matches one in the gradebook,
-       // If it finds one, the it will update the grade to the new grade
+       // If it finds one, then it will update the grade to the new grade
        for (Student s : listOfStudents) {
            if (s.getPid() == givenID) {
                s.setGrade(newGrade);
@@ -176,10 +177,6 @@ public class Gradebook {
         // Obtaining the first element in the array, which should be the minimum one given that the array was sorted
         return convertToLetterGrade(scores[0]);
     }
-
-
-
-
 
 }
 

@@ -31,9 +31,6 @@ public class Student {
         this.grade = grade; //Set Method for Grade
     }
 
-
-
-
     public Student(String firstName, String lastName, int pid, Grade grade) {
         /* Constructor of the Student object, it requests the attributes of the Student to create the object */
         this.firstName = firstName;

@@ -6,10 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="6419ae76-e379-445a-9944-fe324c63010e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIU PROJECTS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIU PROJECTS/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIU PROJECTS/src/A1/test/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIU PROJECTS/src/A1/test/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIU PROJECTS/src/A1/util/Gradebook.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIU PROJECTS/src/A1/util/Gradebook.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/A1/test/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/A1/test/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/A1/util/Grade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/A1/util/Grade.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/A1/util/Gradebook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/A1/util/Gradebook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/A1/util/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/A1/util/Student.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,30 +57,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.DF1Q2.executor&quot;: &quot;Run&quot;,
-    &quot;Application.DF1Q3.executor&quot;: &quot;Run&quot;,
-    &quot;Application.DF1Q4.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Test.executor&quot;: &quot;Run&quot;,
-    &quot;Application.checkStringc.executor&quot;: &quot;Debug&quot;,
-    &quot;Application.test.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Paul P/Documents/FIU/FIU PROJECTS/src/A1/util&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.DF1Q2.executor": "Run",
+    "Application.DF1Q3.executor": "Run",
+    "Application.DF1Q4.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.Test.executor": "Run",
+    "Application.checkStringc.executor": "Debug",
+    "Application.test.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/Paul P/Documents/FIU/FIU PROJECTS/src/A1/util",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Paul P\Documents\FIU\FIU PROJECTS\src\A1\util" />
@@ -151,7 +152,7 @@
       <workItem from="1748216629417" duration="345000" />
       <workItem from="1748270227533" duration="5385000" />
       <workItem from="1748730619641" duration="9119000" />
-      <workItem from="1748818882352" duration="6318000" />
+      <workItem from="1748818882352" duration="8916000" />
     </task>
     <servers />
   </component>

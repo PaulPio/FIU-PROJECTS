@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
 
     private static boolean checkFirstName(String input){
-        /* Method to check if the first name is all letters and to change the first letter to
+        /* Method to check if the first name is all letters and to check if the first letter is
         upper case */
 
         // Must start with a capital letter. If the first char is a dot, this will fail.
@@ -14,8 +14,7 @@ public class Main {
         }
 
         char[] chars = input.toCharArray(); // toCharArray converts the input variable into an array of chars
-        // enhance for loop to run across the char array to review if the array is all letters
-        //if true it will change the first letter to upper case, if false it will go back to user
+        // enhance for loop to run across the char array to review if the array is all letter
         for(char c: chars){
             if(!Character.isLetter(c))
                 return false;
@@ -24,7 +23,7 @@ public class Main {
     }
 
     private static boolean checkLastName(String input){
-        /* Method to check if the last name is all letters and to change the first letter to
+        /* Method to check if the last name is all letters and to check if the first letter is
         upper case. Also check that there is maximum one "." */
         char[] chars = input.toCharArray(); // toCharArray converts the input variable into an array of chars
         int dotCount = 0; // counter of dots "."
@@ -34,7 +33,8 @@ public class Main {
             return false;
         }
         // enhance for loop to run across the char array to review if the array is all letters
-        //if true it will change the first letter to upper case, if false it will go back to user
+        // The dot count variable is increased everytime the for loop detects a ".". if more than one the method
+        // will return false, else, the else if will check if there is a non letter character, if false te method will end
         for(char c: chars){
             if (c == '.') {
                 dotCount++;
@@ -53,7 +53,7 @@ public class Main {
         // enhance for loop to run across the char array to review if the array is all numbers
 
         // Check if it has 7 numbers, anything else is false and does not begin in 0
-        if (input.length() != 7 || input.charAt(0) == 0)
+        if (input.length() != 7 || input.charAt(0) == '0')
             return false;
 
         for(char c: chars){
@@ -67,17 +67,28 @@ public class Main {
         /* Method to check if the score is all numbers and goes from 0 to 100 */
         char[] chars = input.toCharArray(); // toCharArray converts the input variable into an array of chars
 
-        // checks if its between 0 to 100
-        int score = Integer.parseInt(input);
-        if (score < 0 || score > 100)
-            return false;
 
         // enhance for loop to run across the char array to review if the array is all numbers
         for(char c: chars){
             if(!Character.isDigit(c))
                 return false; // A character is not a number
         }
+
+        // checks if its between 0 to 100
+        int score = Integer.parseInt(input);
+        if (score < 0 || score > 100)
+            return false;
+
         return true; // All characters are numbers
+    }
+
+    public static boolean tokenChecker(String [] tokens, int numTokens){
+        //Check if the number is equal to 4, if more the user has to type again the info
+        if(tokens.length != numTokens){
+            System.out.printf("# of tokens in each line must be %d. Please try again.\n", numTokens);
+            return true; // continue makes the loop to start again
+        }
+        else return false;
     }
 
     public static void main(String[] args) {
@@ -100,12 +111,9 @@ public class Main {
             // Separate the string into an array of words using the spaces between words
             String[] tokens = input.split(" ");
 
-
-            //Check if the number is equal to 4, if more the user has to type again the info
-            if(tokens.length != 4){
-                System.out.println("# of tokens in each line must be 4. Please try again.\n");
-                continue; // continue makes the loop to start again
-            }
+            // Calling the tokens checkr method, if true it will go the next iteration of loop, if false,
+            // it will continue this iteration
+            if (tokenChecker(tokens, 4)) continue;
 
             // Assigning the values of the Student attributes
             // First, we assigg the values of the user input to their variable before creating the Student object
@@ -157,7 +165,7 @@ public class Main {
             String command = keyboard.nextLine();
 
             // Command to end program
-            if (command.equals("quit")){
+            if (command.equalsIgnoreCase("quit")){
                 break;
             }
             // Command to calculate Median Score
@@ -174,8 +182,9 @@ public class Main {
             // Command to get the full name of the student using the student id.
             // Creating an array of string, separating the elements through the spaces
             // between words to get the student id
-            else if (command.startsWith("name ")) {
+            else if (command.toLowerCase().startsWith("name ")) {
                 String [] commandTokens = command.split(" "); // Splitting the user typed string into an array
+                if(tokenChecker(commandTokens,2)) continue; // token checker if there are 2 tokens
                 int givenID = Integer.parseInt(commandTokens[1]); // Student id
                 System.out.println("The full name is " + gradebook.getFullName(givenID));
             }
@@ -192,15 +201,22 @@ public class Main {
             }
             // Command to get the minimum letter grade
             else if (command.equalsIgnoreCase("min letter")) {
-                System.out.println("Maximum score is " + gradebook.getMinLetter());
+                System.out.println("Minimum letter grade is " + gradebook.getMinLetter());
             }
             // Command to get change the grade of the student. First we get the student id and the new grade by
             // splitting the string in an array
-            else if (command.startsWith("change ")) {
+            else if (command.toLowerCase().startsWith("change ")) {
                 String [] commandTokens = command.split(" "); // Splitting the user typed string into an array
+                if(tokenChecker(commandTokens,3)) continue; // token checker if there are 3 tokens
+                // Check if the score was written properly, false will make the program go to next iteration ,
+                // true will continue this iteration
+                if (!checkScore(commandTokens[2])){
+                    System.out.println("Score is entered incorrectly. Please try again.\n");
+                    continue;
+                }
                 int givenID = Integer.parseInt(commandTokens[1]); // Student id
                 Grade givenScore = new Grade (Integer.parseInt(commandTokens[2])); // New grade object
-                System.out.println("New score is " + gradebook.changeGrade(givenID, givenScore));
+                System.out.println(gradebook.changeGrade(givenID, givenScore));
             }
             //Command to get the average letter grade
             else if (command.equalsIgnoreCase("average letter")) {
@@ -211,11 +227,11 @@ public class Main {
                 System.out.println("Average score  is " + gradebook.calculateAverageScore());
             }
             // Command to tabulate the students scores
-            else if (command.equalsIgnoreCase("tab score")) {
+            else if (command.equalsIgnoreCase("tab scores")) {
                 gradebook.tabulateScores();
             }
             // Command to tabulate the students letter grades
-            else if (command.startsWith("tab letters")) {
+            else if (command.equalsIgnoreCase("tab letters")) {
                 gradebook.tabulateLetterGrade();
             }
             // Error message
