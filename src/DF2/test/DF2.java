@@ -7,8 +7,6 @@ public class DF2 {
     private static boolean checkScore(String input){
         /* Method to check if the score is all numbers and goes from 0 to 100 */
         char[] chars = input.toCharArray(); // toCharArray converts the input variable into an array of chars
-
-
         // enhance for loop to run across the char array to review if the array is all numbers
         for(char c: chars){
             if(!Character.isDigit(c))

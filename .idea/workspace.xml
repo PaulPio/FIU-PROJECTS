@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6419ae76-e379-445a-9944-fe324c63010e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/DF2/test/DF2Q1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DF2/util/Gradebook.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DF2/util/Students.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DF2/test/B/B.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DF2/test/C/C.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIU PROJECTS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIU PROJECTS/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIU PROJECTS/src/DF2/test/DF2Q1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DF2/test/DF2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DF2/test/DF2.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +24,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -57,9 +60,13 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.B.executor": "Run",
+    "Application.C.executor": "Run",
     "Application.DF1Q2.executor": "Run",
     "Application.DF1Q3.executor": "Run",
     "Application.DF1Q4.executor": "Run",
+    "Application.DF2.executor": "Run",
+    "Application.DF2Q1.executor": "Run",
     "Application.Main.executor": "Run",
     "Application.Test.executor": "Run",
     "Application.checkStringc.executor": "Debug",
@@ -124,8 +131,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Test" />
         <item itemvalue="Application.DF1Q2" />
+        <item itemvalue="Application.Test" />
         <item itemvalue="Application.DF1Q3" />
       </list>
     </recent_temporary>
@@ -152,7 +159,8 @@
       <workItem from="1748270227533" duration="5385000" />
       <workItem from="1748730619641" duration="9119000" />
       <workItem from="1748818882352" duration="9591000" />
-      <workItem from="1748872397095" duration="693000" />
+      <workItem from="1748872397095" duration="1438000" />
+      <workItem from="1748898062144" duration="1486000" />
     </task>
     <servers />
   </component>
