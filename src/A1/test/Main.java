@@ -246,6 +246,14 @@ public class Main {
                 if (gradebook.isEmpty()) continue; // continues if there are no students in gradebook
                 gradebook.tabulateLetterGrade();
             }
+            // Command to show letter grade given the panther id provided by yser
+            else if (command.toLowerCase().startsWith("letter ")) {
+                if (gradebook.isEmpty()) continue; // continues if there are no students in gradebook
+                String [] commandTokens = command.split(" "); // Splitting the user typed string into an array
+                if(tokenChecker(commandTokens,2)) continue; // token checker if there are 2 tokens
+                int givenID = Integer.parseInt(commandTokens[1]);
+                System.out.println(gradebook.getLetterGrade(givenID));
+            }
             // Error message
             else
                 System.out.println("Illegal command. Please try again.");

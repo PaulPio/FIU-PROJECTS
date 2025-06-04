@@ -29,7 +29,8 @@ public class Gradebook {
     public void addStudent (Student student, int givenID) {
         /* Method to add students to gradebook */
 
-        // Check for duplicate PIDs if necessary
+        // Check for duplicate PIDs if necessary, if true, then the student wont be added to the gradebook,
+        // if false then it will be added
          for (Student s : listOfStudents) {
             if (s.getPid() == givenID) {
                 System.out.println("Error: Student with PID " + givenID + " already exists.");
@@ -115,6 +116,8 @@ public class Gradebook {
 
    public String getFullName(int givenID){
         /* Method to get full name of student using the Panther ID*/
+
+       //For loop that runs through the array looking for a student that matches the panther id that we are looking for
        for (Student s : listOfStudents) {
            if (s.getPid() == givenID)
                // If ID is found in array, prints the full name of student
@@ -122,6 +125,17 @@ public class Gradebook {
        }
        return "Wrong information, try again\n"; // the search for students failed, the method returns an error message
    }
+
+    public String getLetterGrade(int givenID){
+        /* Method to get letter grade of student using the Panther ID*/
+        //For loop that runs through the array looking for a student that matches the panther id that we are looking for
+        for (Student s : listOfStudents) {
+            if (s.getPid() == givenID)
+                // If ID is found in array, prints the letter grade of student
+                return "The Letter Grade of the Student is " + s.getGrade().getLetterGrade();
+        }
+        return "Wrong information, try again\n"; // the search for students failed, the method returns an error message
+    }
 
    public String changeGrade(int givenID, Grade newGrade){
         /* Method to change the student grade */
