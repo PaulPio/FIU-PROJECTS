@@ -152,7 +152,7 @@ public class Main {
             Student currentStudent = new Student(firstName,lastName,id,currentGrade);
 
             // Adding students to the gradebook
-            gradebook.addStudent(currentStudent);
+            gradebook.addStudent(currentStudent, id);
 
             // Message to user to add new student info. Done when finished
             System.out.println(" Please enter the information of the next student using the same format.\n" +
@@ -170,11 +170,13 @@ public class Main {
             }
             // Command to calculate Median Score
             else if (command.equalsIgnoreCase("median score")){
+                if (gradebook.isEmpty()) continue; // continues if there are no students in gradebook
                 System.out.println("Median is " + gradebook.calculateMedianScore());
             }
             // Command to calculate Median Letter Grade. It uses the calculate median score method to get the score
             // and the uses the convertToLetterGrade to get the median letter value of the score
             else if (command.equalsIgnoreCase("median letter")) {
+                if (gradebook.isEmpty()) continue; // continues if there are no students in gradebook
                 double medianScore = gradebook.calculateMedianScore();
                 String letter = Grade.convertToLetterGrade(medianScore);
                 System.out.println("Median letter is " + letter);
@@ -183,29 +185,35 @@ public class Main {
             // Creating an array of string, separating the elements through the spaces
             // between words to get the student id
             else if (command.toLowerCase().startsWith("name ")) {
+                if (gradebook.isEmpty()) continue; // continues if there are no students in gradebook
                 String [] commandTokens = command.split(" "); // Splitting the user typed string into an array
                 if(tokenChecker(commandTokens,2)) continue; // token checker if there are 2 tokens
                 int givenID = Integer.parseInt(commandTokens[1]); // Student id
-                System.out.println("The full name is " + gradebook.getFullName(givenID));
+                System.out.println(gradebook.getFullName(givenID)); // Printing result of the function
             }
             // Command to get the minimum score
             else if (command.equalsIgnoreCase("min score")) {
+                if (gradebook.isEmpty()) continue; // continues if there are no students in gradebook
                 System.out.println("Minimum score is " + gradebook.getMinScore());
             } // Command to get the maximum score
             else if (command.equalsIgnoreCase("max score")) {
+                if (gradebook.isEmpty()) continue; // continues if there are no students in gradebook
                 System.out.println("Maximum score is " + gradebook.getMaxScore());
             }
             // Command to get the maximum letter grade
             else if (command.equalsIgnoreCase("max letter")) {
+                if (gradebook.isEmpty()) continue; // continues if there are no students in gradebook
                 System.out.println("Maximum letter grade is " + gradebook.getMaxLetter());
             }
             // Command to get the minimum letter grade
             else if (command.equalsIgnoreCase("min letter")) {
+                if (gradebook.isEmpty()) continue; // continues if there are no students in gradebookPa
                 System.out.println("Minimum letter grade is " + gradebook.getMinLetter());
             }
             // Command to get change the grade of the student. First we get the student id and the new grade by
             // splitting the string in an array
             else if (command.toLowerCase().startsWith("change ")) {
+                if (gradebook.isEmpty()) continue; // continues if there are no students in gradebook
                 String [] commandTokens = command.split(" "); // Splitting the user typed string into an array
                 if(tokenChecker(commandTokens,3)) continue; // token checker if there are 3 tokens
                 // Check if the score was written properly, false will make the program go to next iteration ,
@@ -220,18 +228,22 @@ public class Main {
             }
             //Command to get the average letter grade
             else if (command.equalsIgnoreCase("average letter")) {
+                if (gradebook.isEmpty()) continue; // continues if there are no students in gradebook
                 System.out.println("Average Letter Grade  is " + gradebook.calculateAverageLetterGrade());
             }
             //Command to get the average score
             else if (command.equalsIgnoreCase("average score")) {
+                if (gradebook.isEmpty()) continue; // continues if there are no students in gradebook
                 System.out.println("Average score  is " + gradebook.calculateAverageScore());
             }
             // Command to tabulate the students scores
             else if (command.equalsIgnoreCase("tab scores")) {
+                if (gradebook.isEmpty()) continue; // continues if there are no students in gradebook
                 gradebook.tabulateScores();
             }
             // Command to tabulate the students letter grades
             else if (command.equalsIgnoreCase("tab letters")) {
+                if (gradebook.isEmpty()) continue; // continues if there are no students in gradebook
                 gradebook.tabulateLetterGrade();
             }
             // Error message

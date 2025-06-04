@@ -16,9 +16,27 @@ public class Gradebook {
 
 
 
-    public void addStudent (Student s) {
+    public boolean isEmpty() {
+        /*
+          Checks if the gradebook is empty.
+          return true if there are no students, false otherwise.
+         */
+        if (listOfStudents.isEmpty()) {
+            System.out.println("No students in the gradebook.");
+        }
+        return listOfStudents.isEmpty();
+    }
+    public void addStudent (Student student, int givenID) {
         /* Method to add students to gradebook */
-        listOfStudents.add(s);
+
+        // Check for duplicate PIDs if necessary
+         for (Student s : listOfStudents) {
+            if (s.getPid() == givenID) {
+                System.out.println("Error: Student with PID " + givenID + " already exists.");
+                return;
+            }
+         }
+        listOfStudents.add(student);
     }
     public void tabulateScores(){
         /* Method to print the students info */
@@ -49,6 +67,7 @@ public class Gradebook {
         /* Method to calculate the average score of the students grades, it uses an enhanced for loop to
         * review the student array, adds the score and at the end, it divides the total score
         * between the number of students */
+
 
         // Declaring local variable sum
         double sum = 0;
@@ -98,7 +117,8 @@ public class Gradebook {
         /* Method to get full name of student using the Panther ID*/
        for (Student s : listOfStudents) {
            if (s.getPid() == givenID)
-               return s.getFirstName() + " " + s.getLastName();
+               // If ID is found in array, prints the full name of student
+               return "The full name is " + s.getFirstName() + " " + s.getLastName();
        }
        return "Wrong information, try again\n"; // the search for students failed, the method returns an error message
    }

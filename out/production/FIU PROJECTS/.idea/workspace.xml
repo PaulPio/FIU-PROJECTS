@@ -17,6 +17,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -52,9 +53,12 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Application.B.executor&quot;: &quot;Run&quot;,
+    &quot;Application.C.executor&quot;: &quot;Run&quot;,
     &quot;Application.DF1Q2.executor&quot;: &quot;Run&quot;,
     &quot;Application.DF1Q3.executor&quot;: &quot;Run&quot;,
     &quot;Application.DF1Q4.executor&quot;: &quot;Run&quot;,
+    &quot;Application.DF2.executor&quot;: &quot;Run&quot;,
     &quot;Application.DF2Q1.executor&quot;: &quot;Run&quot;,
     &quot;Application.Main.executor&quot;: &quot;Run&quot;,
     &quot;Application.Test.executor&quot;: &quot;Run&quot;,
@@ -84,7 +88,7 @@
       <recent name="src.A1.test" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DF1Q2">
+  <component name="RunManager">
     <configuration name="DF1Q2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="src.DF1.test.DF1Q2" />
       <module name="FIU PROJECTS" />
@@ -149,6 +153,8 @@
       <workItem from="1748730619641" duration="9119000" />
       <workItem from="1748818882352" duration="9591000" />
       <workItem from="1748872397095" duration="1438000" />
+      <workItem from="1748898062144" duration="1486000" />
+      <workItem from="1748906803238" duration="28000" />
     </task>
     <servers />
   </component>
