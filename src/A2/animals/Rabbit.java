@@ -1,13 +1,13 @@
 package src.A2.animals;
 
-public class Mouse extends Prey {
-    public Mouse(int id, int x, int y) {
+public class Rabbit extends Prey {
+    public Rabbit(int id, int x, int y) {
         super(id, x, y);
     }
 
     @Override
     public char getSymbol() {
-        return 'M';
+        return 'R';
     }
 
     /**
@@ -16,6 +16,6 @@ public class Mouse extends Prey {
      */
     @Override
     public String toString(){
-        return String.format("Mouse #%d @(%d, %d)", getId(), getX(), getY());
+        return String.format("Rabbit #%d @(%d, %d)", getId(), getX(), getY());
     }
 }

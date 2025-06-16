@@ -3,7 +3,7 @@ import src.A2.animals.*;
 import java.util.*;
 
 
-/*
+/**
 * This program simulates interactions among animals on a 2D board
 * Board is a n by n square shape field where n is given by user
 * There are two classes of animals on the board: Prey and Predator
@@ -74,6 +74,17 @@ public class AnimalSimulation {
                 int y = random.nextInt(n);
                 if (board.isEmpty(x, y)) {
                     board.addAnimal(new Mouse(id++, x, y));
+                    break;
+                }
+            }
+        }
+
+        for(int i = 0; i < k;i++){//add prey on the board
+            while (true) {
+                int x = random.nextInt(n);
+                int y = random.nextInt(n);
+                if (board.isEmpty(x, y)) {
+                    board.addAnimal(new Rabbit(id++, x, y));
                     break;
                 }
             }

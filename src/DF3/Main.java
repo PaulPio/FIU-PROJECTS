@@ -11,7 +11,9 @@ class TwoDShape{
     public double size(){//this method will be overridden by children of class TwoDShape
         return Double.NaN;
     }
-    public TwoDShape(String name){this.name = name;}
+    public TwoDShape(String name){
+        this.name = name;
+    }
 }
 class Rectangle extends TwoDShape{
     //This class represents a rectangle!
@@ -20,6 +22,7 @@ class Rectangle extends TwoDShape{
     public String toString(){
         return String.format("Rectangle named %s with area %.2f.", name, size());
     }
+
     @Override
     public double size(){
         return width * height;//size is defined as the area of rectangle!
@@ -56,10 +59,15 @@ class Circle extends TwoDShape{
         super("random unit radius");
         this.radius = 1.0;
     }
-   /* @Override
+
+    /**
+     * String.format() used to return a string in a specific format, using the needed placeholders
+     * @return String phrase
+     */
+   @Override
     public String toString(){
         return String.format("Circle named %s with area %.2f.", name, size());
-    }*/
+    }
 }
 //Main class to test previous ones... Only this class is public
 public class Main{

@@ -19,6 +19,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -64,6 +65,7 @@
     &quot;Application.DF2.executor&quot;: &quot;Run&quot;,
     &quot;Application.DF2Q1.executor&quot;: &quot;Run&quot;,
     &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ShapeDemo.executor&quot;: &quot;Run&quot;,
     &quot;Application.Test.executor&quot;: &quot;Run&quot;,
     &quot;Application.checkStringc.executor&quot;: &quot;Debug&quot;,
     &quot;Application.test.executor&quot;: &quot;Run&quot;,
@@ -92,7 +94,7 @@
       <recent name="src.A1.test" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DF1Q2">
+  <component name="RunManager">
     <configuration name="DF1Q2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="src.DF1.test.DF1Q2" />
       <module name="FIU PROJECTS" />
@@ -162,7 +164,7 @@
       <workItem from="1749073817124" duration="4362000" />
       <workItem from="1749330444257" duration="4897000" />
       <workItem from="1749336136435" duration="2000" />
-      <workItem from="1749912629121" duration="630000" />
+      <workItem from="1749912629121" duration="5585000" />
     </task>
     <servers />
   </component>
