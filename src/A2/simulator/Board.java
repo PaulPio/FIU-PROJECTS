@@ -143,7 +143,7 @@ public class Board {
                 {0, -1}, //Left direction
                 {-1, 0} // Up direction
         };
-
+        // For loop that looks acr
         for (int[] dir : directions) {
             int newX = x + dir[0];
             int newY = y + dir[1];
