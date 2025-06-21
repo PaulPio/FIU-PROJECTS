@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6419ae76-e379-445a-9944-fe324c63010e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/A2/animals/Panther.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/A2/animals/Shark.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/A2/simulator/AnimalSimulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/A2/simulator/AnimalSimulation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +26,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Rebase.Settings">
+    <option name="NEW_BASE" value="origin/master" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -94,7 +100,7 @@
       <recent name="src.A1.test" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DF1Q2">
+  <component name="RunManager">
     <configuration name="DF1Q2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="src.DF1.test.DF1Q2" />
       <module name="FIU PROJECTS" />
@@ -166,6 +172,7 @@
       <workItem from="1749336136435" duration="2000" />
       <workItem from="1749912629121" duration="5796000" />
       <workItem from="1750080058558" duration="2196000" />
+      <workItem from="1750525098558" duration="769000" />
     </task>
     <servers />
   </component>

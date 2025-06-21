@@ -67,6 +67,22 @@ public class AnimalSimulation {
                     break;
                 }
             }
+            while (true) {
+                int x = random.nextInt(n);
+                int y = random.nextInt(n);
+                if (board.isEmpty(x, y)) {
+                    board.addAnimal(new Panther(id++, x, y));
+                    break;
+                }
+            }
+            while (true) {
+                int x = random.nextInt(n);
+                int y = random.nextInt(n);
+                if (board.isEmpty(x, y)) {
+                    board.addAnimal(new Shark(id++, x, y));
+                    break;
+                }
+            }
         }
         for(int i = 0; i < k;i++){//add prey on the board
             while (true) {
