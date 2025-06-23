@@ -130,12 +130,6 @@ public class Board {
         return closestPrey;
     }
 
-    /**
-     * Method to define if the animal has any other animals nearby
-     * @param x
-     * @param y
-     * @return
-     */
     public List<int[]> getNeighboringSquares(int x, int y) {//e.g. x,y = 0,0 OR x,y = 1,2
         List<int[]> neighbors = new ArrayList<>(); // Array of the neighbors that the animals has
         int[][] directions = {{0, 1}, //Right direction

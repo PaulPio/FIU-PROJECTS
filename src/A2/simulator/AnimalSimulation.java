@@ -46,7 +46,7 @@ public class AnimalSimulation {
 
     private static Board initializeBoard(int n, int k) {
 //creates an empty board first
-//adds all 3k animals to the board at random positions!
+//adds all animals to the board at random positions!
         Board board = new Board(n);
         int id = 0;
         for (int i = 0; i < k; i++) {//Predators...
