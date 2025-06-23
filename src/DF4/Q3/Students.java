@@ -16,13 +16,15 @@ public class Students implements Comparable<Student>{
          **returns a negative number if it's less than the input parameter
          **returns a positive number otherwise*/
  /*
-        if(gpa.compareTo(other.gpa) != 0)
-            return gpa.compareTo(other.gpa);
-        if(!lastName.equals(other.lastName))//first tie-breaker
-            return lastName.compareTo(other.lastName);
-        if(!firstName.equals(other.firstName))//second tie-breaker
-            return -firstName.compareTo(other.firstName);
-        return id.compareTo(other.id);
+        public int compareTo (Student other){
+        if(this.gpa.compareTo(other.gpa) != 0)
+            return this.gpa.compareTo(other.gpa);
+        if(this.lastName.compareTo(other.lastName) != 0)
+            return this.lastName.compareTo(other.lastName);
+        if(this.firstName.compareTo(other.firstName) != 0)
+            return -this.firstName.compareTo(other.firstName);
+        return this.id.compareTo(other.id);//final tie-breaker
+    }
     }
 }
 

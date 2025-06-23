@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6419ae76-e379-445a-9944-fe324c63010e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/DF5/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/A2/simulator/AnimalSimulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/A2/simulator/AnimalSimulation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/A2/simulator/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/A2/simulator/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIU PROJECTS/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIU PROJECTS/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIU PROJECTS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIU PROJECTS/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIU PROJECTS/src/A2/simulator/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIU PROJECTS/src/A2/simulator/Board.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DF4/Q3/Students.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DF4/Q3/Students.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,6 +99,9 @@
       <recent name="C:\Users\Paul P\Documents\FIU\FIU PROJECTS\src\DF2\util" />
       <recent name="C:\Users\Paul P\Documents\FIU\FIU PROJECTS\src\A1\util" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\siste\IdeaProjects\FIU-PROJECTS" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="src.A1.test" />
     </key>
@@ -177,5 +184,21 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/DF4/Q1/Planar.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/A2/animals/Shark.java</url>
+          <line>4</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
