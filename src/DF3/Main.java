@@ -1,6 +1,6 @@
 package src.DF3;
 
-//-------------------Content of Main.java------------------------------
+//-------------------Content of FileTransfer.java------------------------------
 class TwoDShape{
     //This class provides a generic prototype for any two dimensional shape!
     protected String name;
