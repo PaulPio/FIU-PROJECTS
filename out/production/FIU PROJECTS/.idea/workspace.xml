@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6419ae76-e379-445a-9944-fe324c63010e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/DF5/input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Q6/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Q6/Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DF3/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DF3/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DF5/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DF5/FileTransfer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIU PROJECTS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIU PROJECTS/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,10 +70,15 @@
     &quot;Application.DF1Q4.executor&quot;: &quot;Run&quot;,
     &quot;Application.DF2.executor&quot;: &quot;Run&quot;,
     &quot;Application.DF2Q1.executor&quot;: &quot;Run&quot;,
+    &quot;Application.FileTransfer.executor&quot;: &quot;Run&quot;,
     &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainClass.executor&quot;: &quot;Run&quot;,
     &quot;Application.ShapeDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Student.executor&quot;: &quot;Run&quot;,
     &quot;Application.Test.executor&quot;: &quot;Run&quot;,
     &quot;Application.checkStringc.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.src.DF5.Q4.Test.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.src.Q6.Test.executor&quot;: &quot;Run&quot;,
     &quot;Application.test.executor&quot;: &quot;Run&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
@@ -81,29 +86,35 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Paul P/Documents/FIU/FIU PROJECTS/src/A2&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Paul P/Documents/FIU/FIU PROJECTS/src/DF5/Q2&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.smartKeys&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Paul P\Documents\FIU\FIU PROJECTS\src\DF5\Q2" />
       <recent name="C:\Users\Paul P\Documents\FIU\FIU PROJECTS\src\A2" />
       <recent name="C:\Users\Paul P\Documents\FIU\FIU PROJECTS\src\DF2\util" />
       <recent name="C:\Users\Paul P\Documents\FIU\FIU PROJECTS\src\A1\util" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Paul P\Documents\FIU\FIU PROJECTS\src\DF5\Q2" />
+      <recent name="C:\Users\Paul P\Documents\FIU\FIU PROJECTS\src\DF5\Q1" />
+      <recent name="C:\Users\Paul P\Documents\FIU\FIU PROJECTS\src\DF5" />
+      <recent name="C:\Users\Paul P\Documents\FIU\FIU PROJECTS" />
       <recent name="C:\Users\siste\IdeaProjects\FIU-PROJECTS" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="src.A1.test" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DF1Q2">
+  <component name="RunManager">
     <configuration name="DF1Q2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="src.DF1.test.DF1Q2" />
       <module name="FIU PROJECTS" />
@@ -177,7 +188,11 @@
       <workItem from="1750080058558" duration="2196000" />
       <workItem from="1750525098558" duration="1535000" />
       <workItem from="1750722582940" duration="12000" />
-      <workItem from="1751240319918" duration="668000" />
+      <workItem from="1751240319918" duration="4148000" />
+      <workItem from="1751324636937" duration="430000" />
+      <workItem from="1751325416100" duration="73000" />
+      <workItem from="1751325553200" duration="869000" />
+      <workItem from="1751496574248" duration="744000" />
     </task>
     <servers />
   </component>
@@ -196,6 +211,16 @@
           <url>file://$PROJECT_DIR$/src/A2/animals/Shark.java</url>
           <line>4</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/DF5/Q4/Test.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/DF5/Q4/Test.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
