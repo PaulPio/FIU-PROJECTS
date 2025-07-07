@@ -6,7 +6,7 @@ public class FileTransfer {
     public static final String inputFileName = "src/DF5/Q1/input.txt";
     public static final String outputFileName = "src/DF5/Q1/output.txt";
 
-    // The main method should accept a String array, not a single String.
+
     public static void main(String[] args) {
         Scanner inputScanner = null;
         PrintWriter outputWriter = null;
