@@ -1,4 +1,4 @@
-package src.A3;
+package src.A3.util;
 
 /**
  * Exception when the user types the wrong data type

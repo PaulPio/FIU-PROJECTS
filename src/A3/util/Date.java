@@ -1,4 +1,4 @@
-package src.A3;
+package src.A3.util;
 
 public class Date implements Comparable<Date>{
     private int day;

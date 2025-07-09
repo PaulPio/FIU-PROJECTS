@@ -1,4 +1,4 @@
-package src.A3;
+package src.A3.util;
 
 
 public class DateTimeInvalidException extends Exception{
