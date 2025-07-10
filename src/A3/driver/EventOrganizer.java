@@ -16,25 +16,28 @@ public class EventOrganizer {
 
     public static void main(String[] args) {
 
-        // Printing the welcome message to the user
+        // --- Phase 1: Event Input ---
+        // Printing the welcome message and instructions to the user.
         System.out.println("Please enter the list of all events! Enter \"Done\" when you finish" +
                 "\nEvent name , Start Date and Time, End Date and Time, Host, Number of guests, Location");
 
-        // Loop to read event inputs from the user
+        // This loop continuously prompts the user for event strings until "Done" is entered.
         while (true) {
 
-            // String variable to hold the user's input
+            // String variable to hold the user's input line.
             String command = keyboard.nextLine();
 
-            // Control statement to end the loop
+            // The control statement to end the input loop.
             if (command.equalsIgnoreCase("Done")) {
                 break;
             }
 
+            // A try-catch block to handle any errors during parsing.
             try {
                 // Attempt to parse the line and create an Event object
                 String[] parts = command.split(",");
                 if (parts.length != 6) {
+                    // If there aren't exactly 6 parts, the format is wrong.
                     throw new InvalidEventFormatException("Invalid input: An event must have exactly 6 comma-separated fields.");
                 }
 
@@ -57,7 +60,7 @@ public class EventOrganizer {
                 // Printing the message that the event was successfully added
                 System.out.println("Event added successfully.");
 
-            } catch (InvalidEventFormatException | NumberFormatException e) {
+            } catch (InvalidEventFormatException | NumberFormatException  | DateTimeInvalidException e) {
                 // Catch parsing errors and prompt the user to try again
                 System.out.println("Error: " + e.getMessage());
                 System.out.println("Please try again.");
@@ -79,13 +82,16 @@ public class EventOrganizer {
             String[] commandParts = commandLine.split(" ", 3);
             String command = commandParts[0].toLowerCase();
 
+            // A switch statement to determine which command to execute.
             switch (command) {
                 case "quit":
+                    // Exit the program.
                     System.out.println("Exiting program.");
                     keyboard.close();
                     return;
 
                 case "print":
+                    // Print all events in their sorted order.
                     System.out.println("\n--- All Events (Sorted) ---");
                     if (events.isEmpty()) {
                         System.out.println("No events to display.");
@@ -98,6 +104,7 @@ public class EventOrganizer {
                     break;
 
                 case "happening":
+                    // Find and print events occurring at a specific time.
                     try {
                         if (commandParts.length < 3 || !commandParts[1].equalsIgnoreCase("on")) {
                             throw new InvalidEventFormatException("Invalid command. Use format: 'happening on MM/DD/YYYY @ hh:mm:ss am/pm'");
@@ -115,13 +122,14 @@ public class EventOrganizer {
                         if (!found) {
                             System.out.println("No events are happening at that time.");
                         }
-                        System.out.println("-------------------------------------\n");
-                    } catch (InvalidEventFormatException e) {
+                        System.out.println("---------------------------\n");
+                    } catch (InvalidEventFormatException | DateTimeInvalidException e) {
                         System.out.println("Error: " + e.getMessage());
                     }
                     break;
 
                 case "hosted":
+                    // Find and print events hosted by a specific person.
                     try {
                         if (commandParts.length < 3 || !commandParts[1].equalsIgnoreCase("by")) {
                             throw new InvalidEventFormatException("Invalid command. Use format: 'hosted by <hostname>'");
@@ -138,13 +146,14 @@ public class EventOrganizer {
                         if (!found) {
                             System.out.println("No events are hosted by that host.");
                         }
-                        System.out.println("-----------------------------\n");
+                        System.out.println("---------------------------\n");
                     } catch (InvalidEventFormatException e) {
                         System.out.println("Error: " + e.getMessage());
                     }
                     break;
 
                 default:
+                    // Handle any unrecognized commands.
                     System.out.println("Unknown command. Please try again.");
                     break;
             }
@@ -153,66 +162,90 @@ public class EventOrganizer {
 
     /**
      * Parses a string into a DateTime object.
-     *
      * @param dateTimeString The string to parse, in "MM/DD/YYYY @ hh:mm:ss am/pm" format.
      * @return A valid DateTime object.
      * @throws InvalidEventFormatException if the string format is incorrect or the date/time is invalid.
+     * @throws DateTimeInvalidException if the format is correct but the date/time values are invalid.
      */
-    private static DateTime parseDateTime(String dateTimeString) throws InvalidEventFormatException {
+    private static DateTime parseDateTime(String dateTimeString) throws InvalidEventFormatException, DateTimeInvalidException  {
+        // First, split the string into date and time parts using " @ " as the delimiter.
+        // Example: "09/10/2025 @ 09:00:00 am" -> ["09/10/2025", "09:00:00 am"]
         String[] parts = dateTimeString.split(" @ ");
         if (parts.length != 2) {
             throw new InvalidEventFormatException("Invalid DateTime format. Expected 'Date @ Time'.");
         }
 
-        // Parse Date part
+        // --- Parse the Date Part ---
+        // Split the date part by "/" to get month, day, and year.
+        // Example: "09/10/2025" -> ["09", "10", "2025"]
         String[] dateParts = parts[0].split("/");
         if (dateParts.length != 3) {
             throw new InvalidEventFormatException("Invalid Date format. Expected 'MM/DD/YYYY'.");
         }
 
-        // Parse Time part
+        // --- Parse the Time Part ---
+        // Split the time part by space to separate the time from "am/pm".
+        // Example: "09:00:00 am" -> ["09:00:00", "am"]
         String[] timeAndAmPm = parts[1].split(" ");
         if (timeAndAmPm.length != 2) {
             throw new InvalidEventFormatException("Invalid Time format. Expected 'hh:mm:ss am/pm'.");
         }
+        // Now, split the time itself by ":" to get hour, minute, and second.
+        // Example: "09:00:00" -> ["09", "00", "00"]
         String[] timeParts = timeAndAmPm[0].split(":");
         if (timeParts.length != 3) {
             throw new InvalidEventFormatException("Invalid Time format. Expected 'hh:mm:ss'.");
         }
 
+        // A try-catch block is used to handle errors that might occur when converting
+        // string parts to numbers (e.g., if the user enters "abc" for the month).
         try {
+            // Convert date strings to integers.
             int month = Integer.parseInt(dateParts[0]);
             int day = Integer.parseInt(dateParts[1]);
             int year = Integer.parseInt(dateParts[2]);
 
+            // Convert time strings to integers.
             int hour = Integer.parseInt(timeParts[0]);
             int minute = Integer.parseInt(timeParts[1]);
             int second = Integer.parseInt(timeParts[2]);
 
+            // Determine if it's AM or PM. Convert to lowercase for case-insensitive comparison.
             String ampm = timeAndAmPm[1].toLowerCase();
             if (!ampm.equals("am") && !ampm.equals("pm")) {
+                // The meridian indicator must be exactly "am" or "pm".
                 throw new InvalidEventFormatException("Time must end with 'am' or 'pm'.");
             }
             boolean isAm = ampm.equals("am");
 
+            // --- Validation ---
+            // Now that we have all the numbers, we must validate them.
+
+            // Create a Date object and use its provided validator.
             Date date = new Date(day, month, year);
             if (!Date.isValidDate(date)) {
+                // The combination of day, month, and year is not a real date (e.g., 02/30/2025).
                 throw new InvalidEventFormatException("The date " + date + " is not a valid calendar date.");
             }
 
-            // Validate hour range
+            // Validate the hour. In a 12-hour format, it must be from 1 to 12.
             if (hour < 1 || hour > 12) {
                 throw new InvalidEventFormatException("Hour must be between 1 and 12.");
             }
 
+            // Create the final DateTime object.
             DateTime dateTime = new DateTime(date, hour, minute, second, isAm);
+            // Use the provided validator to check the full DateTime object. This checks
+            // for things like minutes or seconds being 60 or more.
             if (!DateTime.isValidDateTime(dateTime)) {
-                throw new InvalidEventFormatException("The time is not valid (e.g., minutes/seconds >= 60).");
+                throw new DateTimeInvalidException(dateTime);
             }
 
+            // If all checks pass, return the successfully created DateTime object.
             return dateTime;
 
         } catch (NumberFormatException e) {
+            // This catch block executes if Integer.parseInt() fails.
             throw new InvalidEventFormatException("Date and time components must be numbers.");
         }
     }
