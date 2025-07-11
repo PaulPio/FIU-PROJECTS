@@ -7,9 +7,9 @@
     <list default="true" id="6419ae76-e379-445a-9944-fe324c63010e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FIU PROJECTS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIU PROJECTS/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIU PROJECTS/src/A3/driver/EventOrganizer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIU PROJECTS/src/A3/driver/EventOrganizer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/A3/driver/EventOrganizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/A3/driver/EventOrganizer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/A3/util/DateTimeInvalidException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/A3/util/DateTimeInvalidException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/A3/util/InvalidDataTypeException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/A3/util/InvalidEventFormatException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/A3/util/InvalidEventFormatException.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,7 +207,8 @@
       <workItem from="1751760272418" duration="4863000" />
       <workItem from="1751934610144" duration="959000" />
       <workItem from="1752016431431" duration="5625000" />
-      <workItem from="1752106915744" duration="1962000" />
+      <workItem from="1752106915744" duration="2199000" />
+      <workItem from="1752196552835" duration="2033000" />
     </task>
     <servers />
   </component>

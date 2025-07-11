@@ -46,7 +46,15 @@ public class EventOrganizer {
                 DateTime startDateTime = parseDateTime(parts[1].trim());
                 DateTime endDateTime = parseDateTime(parts[2].trim());
                 String host = parts[3].trim();
-                int invitees = Integer.parseInt(parts[4].trim()); // Throws NumberFormatException if invalid
+
+                //Wrap the invitee parsing in its own try-catch to give a specific error message.
+                int invitees;
+                try{
+                    invitees = Integer.parseInt(parts[4].trim()); // Throws NumberFormatException if invalid
+                }catch(NumberFormatException e){
+                    throw new InvalidEventFormatException("Invalid input: Number of invitees must be a valid integer.");
+                }
+
                 String location = parts[5].trim();
 
                 // Check if start date is after end date
@@ -72,12 +80,14 @@ public class EventOrganizer {
 
         System.out.println("\nAll events entered. You may now enter commands.");
 
-        // Show the new options to the user to view the events that are stored in the array list
-        System.out.println("Commands: 'print', 'happening on DATE @ TIME', 'hosted by HOST', 'quit'");
-
-
         // Loop to process user commands
         while (true) {
+
+
+            // Show the new options to the user to view the events that are stored in the array list
+            System.out.println("Commands: 'print', 'happening on DATE @ TIME', 'hosted by HOST', 'quit'");
+
+
             String commandLine = keyboard.nextLine();
             String[] commandParts = commandLine.split(" ", 3);
             String command = commandParts[0].toLowerCase();

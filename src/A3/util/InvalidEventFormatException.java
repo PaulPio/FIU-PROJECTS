@@ -6,18 +6,11 @@ package src.A3.util;
 public class InvalidEventFormatException extends Exception {
     private String message;
 
-    // Constructors
-
+    /**
+     * Constructs a new InvalidEventFormatException with the specified detail message.
+     * @param message The detail message explaining the reason for the exception.
+     */
     public InvalidEventFormatException(String message) {
-      super(message);
+        super(message);
     }
-  public InvalidEventFormatException() {
-      this.message = message;
-  }
-
-  // Message to indicate the user what went wrong
-  @Override
-  public String getMessage(){
-    return "Illegal character " + message + ".";
-  }
 }
