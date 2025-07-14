@@ -3,3 +3,4 @@
 # JetBrains IDEs
 .out\production\FIU PROJECTS\.idea
 .idea
+*/.idea/workspace.xml

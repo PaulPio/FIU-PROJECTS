@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6419ae76-e379-445a-9944-fe324c63010e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/DF7/Sentence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DF7/BinarySearch2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DF7/BinarySearchAlgorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DF7/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DF7/Main2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIU PROJECTS/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIU PROJECTS/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIU PROJECTS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIU PROJECTS/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DF7/Sentence.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,46 +66,50 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.AnimalSimulation.executor&quot;: &quot;Run&quot;,
-    &quot;Application.B.executor&quot;: &quot;Run&quot;,
-    &quot;Application.C.executor&quot;: &quot;Run&quot;,
-    &quot;Application.DF1Q2.executor&quot;: &quot;Run&quot;,
-    &quot;Application.DF1Q3.executor&quot;: &quot;Run&quot;,
-    &quot;Application.DF1Q4.executor&quot;: &quot;Run&quot;,
-    &quot;Application.DF2.executor&quot;: &quot;Run&quot;,
-    &quot;Application.DF2Q1.executor&quot;: &quot;Run&quot;,
-    &quot;Application.EventOrganizer.executor&quot;: &quot;Run&quot;,
-    &quot;Application.FileTransfer.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MainClass.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ShapeDemo.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Student.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Test.executor&quot;: &quot;Run&quot;,
-    &quot;Application.checkStringc.executor&quot;: &quot;Debug&quot;,
-    &quot;Application.src.DF5.Q4.Test.executor&quot;: &quot;Debug&quot;,
-    &quot;Application.src.DF6.Q1.Test.executor&quot;: &quot;Run&quot;,
-    &quot;Application.src.DF6.Q2.Test.executor&quot;: &quot;Run&quot;,
-    &quot;Application.src.DF6.Test.executor&quot;: &quot;Run&quot;,
-    &quot;Application.src.Q6.Test.executor&quot;: &quot;Run&quot;,
-    &quot;Application.test.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/siste/IdeaProjects/FIU-PROJECTS/src/DF6/Q2V2&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.smartKeys&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.AnimalSimulation.executor": "Run",
+    "Application.B.executor": "Run",
+    "Application.BinarySearch2.executor": "Run",
+    "Application.BinarySearchAlgorithm.executor": "Debug",
+    "Application.BinarySearchT.executor": "Run",
+    "Application.C.executor": "Run",
+    "Application.DF1Q2.executor": "Run",
+    "Application.DF1Q3.executor": "Run",
+    "Application.DF1Q4.executor": "Run",
+    "Application.DF2.executor": "Run",
+    "Application.DF2Q1.executor": "Run",
+    "Application.EventOrganizer.executor": "Run",
+    "Application.FileTransfer.executor": "Run",
+    "Application.Main.executor": "Debug",
+    "Application.Main2.executor": "Run",
+    "Application.MainClass.executor": "Run",
+    "Application.ShapeDemo.executor": "Run",
+    "Application.Student.executor": "Run",
+    "Application.Test.executor": "Run",
+    "Application.checkStringc.executor": "Debug",
+    "Application.src.DF5.Q4.Test.executor": "Debug",
+    "Application.src.DF6.Q1.Test.executor": "Run",
+    "Application.src.DF6.Q2.Test.executor": "Run",
+    "Application.src.DF6.Test.executor": "Run",
+    "Application.src.Q6.Test.executor": "Run",
+    "Application.test.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/siste/IdeaProjects/FIU-PROJECTS/src/DF6/Q2V2",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editor.preferences.smartKeys",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\siste\IdeaProjects\FIU-PROJECTS\src\DF6\Q2V2" />
@@ -247,6 +258,39 @@
           <url>file://$PROJECT_DIR$/src/DF5/Q4/Test.java</url>
           <line>34</line>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/DF7/BinarySearchAlgorithm.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/DF7/BinarySearchAlgorithm.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/DF7/BinarySearchAlgorithm.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/DF7/Main.java</url>
+          <line>3</line>
+          <properties class="src.DF7.Main" method="f">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/DF7/Main2.java</url>
+          <line>3</line>
+          <properties class="src.DF7.Main2" method="g">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
