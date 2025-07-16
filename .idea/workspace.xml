@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6419ae76-e379-445a-9944-fe324c63010e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/DF8/AlphabetSumPuzzle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DF8/Q1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Q8/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIU PROJECTS/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIU PROJECTS/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIU PROJECTS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIU PROJECTS/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +65,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Application.AlphabetSumPuzzle.executor&quot;: &quot;Run&quot;,
     &quot;Application.AnimalSimulation.executor&quot;: &quot;Run&quot;,
     &quot;Application.B.executor&quot;: &quot;Run&quot;,
     &quot;Application.BinarySearch2.executor&quot;: &quot;Run&quot;,
@@ -73,9 +79,10 @@
     &quot;Application.DF2Q1.executor&quot;: &quot;Run&quot;,
     &quot;Application.EventOrganizer.executor&quot;: &quot;Run&quot;,
     &quot;Application.FileTransfer.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
     &quot;Application.Main2.executor&quot;: &quot;Run&quot;,
     &quot;Application.MainClass.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Q1.executor&quot;: &quot;Run&quot;,
     &quot;Application.ShapeDemo.executor&quot;: &quot;Run&quot;,
     &quot;Application.Student.executor&quot;: &quot;Run&quot;,
     &quot;Application.Test.executor&quot;: &quot;Run&quot;,
@@ -125,7 +132,7 @@
       <recent name="src.A1.test" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DF1Q2">
+  <component name="RunManager">
     <configuration name="DF1Q2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="src.DF1.test.DF1Q2" />
       <module name="FIU PROJECTS" />
@@ -211,7 +218,8 @@
       <workItem from="1752196552835" duration="2137000" />
       <workItem from="1752509569058" duration="405000" />
       <workItem from="1752512092088" duration="2015000" />
-      <workItem from="1752685978456" duration="424000" />
+      <workItem from="1752685978456" duration="5154000" />
+      <workItem from="1752702929327" duration="920000" />
     </task>
     <servers />
   </component>
