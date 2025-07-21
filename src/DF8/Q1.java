@@ -16,7 +16,7 @@ public class Q1 {
             return 0;
 
         // Base cases: If n is 1 or 2, the result is 1.
-        if(n <= 2)
+        if(n == 1 || n == 2)
             return 1;
 
         // Recursive step: For n >= 3, g(n) is the sum of the previous three elements.
