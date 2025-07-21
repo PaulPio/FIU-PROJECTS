@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6419ae76-e379-445a-9944-fe324c63010e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/DF8/AlphabetSumPuzzle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DF8/Q1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Q8/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIU PROJECTS/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIU PROJECTS/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FIU PROJECTS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIU PROJECTS/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIU PROJECTS/src/DF8/AlphabetSumPuzzle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIU PROJECTS/src/DF8/AlphabetSumPuzzle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DF8/AlphabetSumPuzzle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DF8/AlphabetSumPuzzle.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,7 +217,8 @@
       <workItem from="1752509569058" duration="405000" />
       <workItem from="1752512092088" duration="2015000" />
       <workItem from="1752685978456" duration="5154000" />
-      <workItem from="1752702929327" duration="920000" />
+      <workItem from="1752702929327" duration="1121000" />
+      <workItem from="1753051259973" duration="4704000" />
     </task>
     <servers />
   </component>

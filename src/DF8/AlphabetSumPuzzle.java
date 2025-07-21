@@ -13,7 +13,6 @@ public class AlphabetSumPuzzle {
     // A string to hold the word that is the result of the sum.
     private static String result = null;
 
-
     public static void main(String[] args){
         // Scanner to read input from the user.
         Scanner keyboard = new Scanner(System.in);
@@ -54,6 +53,8 @@ public class AlphabetSumPuzzle {
                     "THE is " +
                     numericalValue("THE", digitValues));
         }
+
+        keyboard.close(); // closing the scanner object
     }
 
     /**
@@ -86,15 +87,7 @@ public class AlphabetSumPuzzle {
                 // and add the digit corresponding to the new character.
                 rv = 10 * rv + digitValues[c];
         return rv; // Return the final calculated value.
-        /* SLOW solution
-        int power = word.length()-1;
-        for(char c: word.toCharArray())
-            if(digitValues[c] < 0)//if c is not assigned to any value
-                return -1;//error
-            else
-                rv += Math.pow(10, power--) * digitValues[c];
-        return rv;
-        */
+
     }
 
     //THE: 3-digit integer
@@ -102,11 +95,54 @@ public class AlphabetSumPuzzle {
     // 1 * E + 10 * H + 100 * T
     // 1 * E + 10 * (H + 10 * T)
 
+    /**
+     * Method that recursively generates and prints all possible combinations of digit assignments for the puzzle's variables.
+     * @param digitValues digitValues An array mapping characters to their currently assigned integer digits.
+     */
     private static void printAllCombinations(int[] digitValues){
-        //Your code here!
-        if (digitValues.length == 0)
-            return;
 
+        // Assume initially that all variables have been assigned a digit.
+        boolean complete = true;
+        // A placeholder for the first variable we find that hasn't been assigned a digit.
+        char unassignedVariable = 0;
+
+        // Loop through all unique letters (variables) identified in the puzzle.
+        for (char variable : variables)
+            // Check if the current variable has not been assigned a digit yet (its value is -1).
+            if(digitValues[variable] == -1) { // variable has not been assigned to any value yet
+                complete = false; // assignmetn is not complete
+                unassignedVariable = variable; // variable without assignment is stored in the unassignedVariable
+                // Exit the loop since we only need to find one unassigned variable at a time.
+                break;
+            }
+
+        // BASE CASE: This block executes if the loop above completed without finding any unassigned variables.
+        // This means every letter has been assigned a digit.
+        if(complete){
+
+            // Enhanced for loop that goes through all the char in the array list ot print them with their numerical values combinations
+            for(char variable : variables){
+                // Print the current combination of letters and their assigned digits.
+                System.out.print(variable + ": " + digitValues[variable] + "| ");
+            }
+
+            // Move to the next line for the next combination.
+            System.out.println();
+            }
+        // RECURSIVE STEP: This block executes if we found an unassigned variable.
+        else{
+            for(int i = 0; i <10; i++){
+                digitValues[unassignedVariable] = i; // assigne the unassignedVariable to one of the possible digits
+                printAllCombinations(digitValues); // recursive call
+
+
+            }
+
+            // After the loop has tried all digits (0-9) for the current unassigned variable,
+            // reset its value to -1. This allows more  recursive calls to try different combinations.
+            digitValues[unassignedVariable] = -1;
+
+        }
 
     }
 }
