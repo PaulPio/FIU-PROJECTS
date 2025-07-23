@@ -17,6 +17,9 @@ public class AlphabetSumPuzzle {
         // Scanner to read input from the user.
         Scanner keyboard = new Scanner(System.in);
 
+        //Welcome message
+        System.out.println("Type a puzzle or Done to exit.");
+
         // Loop to process multiple puzzles, one per line.
         while(keyboard.hasNextLine()){
             String puzzle = keyboard.nextLine();
@@ -55,7 +58,6 @@ public class AlphabetSumPuzzle {
             //solve method is called here
             solve(digitValues);
 
-           // printAllCombinations(digitValues);
             System.out.println("\nType another puzzle or Done to exit.");
         }
 
