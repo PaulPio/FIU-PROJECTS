@@ -20,6 +20,16 @@ public class AlphabetSumPuzzle {
         // Loop to process multiple puzzles, one per line.
         while(keyboard.hasNextLine()){
             String puzzle = keyboard.nextLine();
+
+            if(puzzle.equalsIgnoreCase("done")){
+                break;
+            }
+
+            // Clear static lists for the new puzzle.
+            operands.clear();
+            variables.clear();
+
+
             // Split the puzzle string by any non-alphabetic characters to extract the words.
             String[] tokens = puzzle.split("[^a-zA-Z]");
 
@@ -38,20 +48,15 @@ public class AlphabetSumPuzzle {
             // Initialize all character mappings to -1, indicating no digit has been assigned yet.
             for(int i = 0; i < 256;i++)
                 digitValues[i] = -1;//symbol for empty cell!
-            //solve method is called here
 
             //detect every character participating in the puzzle and store it in the list of variables
             findAllVariables(puzzle);
 
+            //solve method is called here
+            solve(digitValues);
 
-            printAllCombinations(digitValues);
-
-            digitValues['T'] = 1;
-            digitValues['H'] = 2;
-            digitValues['E'] = 3;
-            System.out.println("This is an example: Numerical value of " +
-                    "THE is " +
-                    numericalValue("THE", digitValues));
+           // printAllCombinations(digitValues);
+            System.out.println("\nType another puzzle or Done to exit.");
         }
 
         keyboard.close(); // closing the scanner object
@@ -62,7 +67,7 @@ public class AlphabetSumPuzzle {
      * @param puzzle The complete puzzle string (e.g., "SEND + MORE = MONEY").
      */
     private static void findAllVariables(String puzzle) {
-        variables.clear(); // Clear the list for new puzzles.
+
         for(char c: puzzle.toCharArray())
             // If the character is a letter and not already in our list, add it.
             if(Character.isLetter(c) && !variables.contains(c))
@@ -90,59 +95,94 @@ public class AlphabetSumPuzzle {
 
     }
 
-    //THE: 3-digit integer
-    //numerical value = T * 100 + H * 10 + E * 1
-    // 1 * E + 10 * H + 100 * T
-    // 1 * E + 10 * (H + 10 * T)
 
     /**
-     * Method that recursively generates and prints all possible combinations of digit assignments for the puzzle's variables.
-     * @param digitValues digitValues An array mapping characters to their currently assigned integer digits.
+     * Method that solves the program by comparing both sides of the equation for the right outcome
+     * @param digitValues  digitValues An array mapping characters to their currently assigned integer digits.
      */
-    private static void printAllCombinations(int[] digitValues){
+    public static void solve(int[] digitValues) {
 
-        // Assume initially that all variables have been assigned a digit.
-        boolean complete = true;
-        // A placeholder for the first variable we find that hasn't been assigned a digit.
+        // Find the next variable to assign
         char unassignedVariable = 0;
+        boolean complete = true;
 
-        // Loop through all unique letters (variables) identified in the puzzle.
-        for (char variable : variables)
-            // Check if the current variable has not been assigned a digit yet (its value is -1).
-            if(digitValues[variable] == -1) { // variable has not been assigned to any value yet
-                complete = false; // assignmetn is not complete
-                unassignedVariable = variable; // variable without assignment is stored in the unassignedVariable
-                // Exit the loop since we only need to find one unassigned variable at a time.
-                break;
+        // Loop through all unique letters to find the first one that hasn't been assigned a digit.
+        for (char variable : variables) {
+            if (digitValues[variable] == -1) { // -1 means it's unassigned.
+                unassignedVariable = variable;
+                complete = false;// If we find one, the assignment is not complete.
+                break; // Exit the loop, as we only need one unassigned variable at a time.
             }
-
-        // BASE CASE: This block executes if the loop above completed without finding any unassigned variables.
-        // This means every letter has been assigned a digit.
-        if(complete){
-
-            // Enhanced for loop that goes through all the char in the array list ot print them with their numerical values combinations
-            for(char variable : variables){
-                // Print the current combination of letters and their assigned digits.
-                System.out.print(variable + ": " + digitValues[variable] + "| ");
-            }
-
-            // Move to the next line for the next combination.
-            System.out.println();
-            }
-        // RECURSIVE STEP: This block executes if we found an unassigned variable.
-        else{
-            for(int i = 0; i <10; i++){
-                digitValues[unassignedVariable] = i; // assigne the unassignedVariable to one of the possible digits
-                printAllCombinations(digitValues); // recursive call
-
-
-            }
-
-            // After the loop has tried all digits (0-9) for the current unassigned variable,
-            // reset its value to -1. This allows more  recursive calls to try different combinations.
-            digitValues[unassignedVariable] = -1;
-
         }
 
+        // BASE CASE: If all variables have been assigned a digit.
+        // If the loop finished and 'complete' is still true, it means every variable has a digit.
+        if (complete) {
+            int operandsSum = 0;
+            for (String operand : operands) {
+                operandsSum += numericalValue(operand, digitValues);
+            }
+            int resultValue = numericalValue(result, digitValues);
+
+            // If the sum of the operands equals the result, we've found a solution.
+            if (operandsSum == resultValue) {
+                System.out.print("Solution: ");
+                for (char var : variables) {
+                    System.out.print(var + ": " + digitValues[var] + " | ");
+                }
+                System.out.println();
+            }
+            return; // End this recursive path.
+        }
+
+        // RECURSIVE STEP: Try assigning each unused digit to the unassigned variable.
+
+        // Before trying new digits, determine which are already in use in this path.
+        // This array is created fresh in each call to check the current state.
+        boolean[] usedDigits = new boolean[10];
+        for (char v : variables) {
+            if (digitValues[v] != -1) { // If a variable has a digit mark the digit as used
+                usedDigits[digitValues[v]] = true;
+            }
+        }
+        // Loop through every possible digit from 0 to 9.
+        for (int digit = 0; digit < 10; digit++) {
+            //  Check if the digit is already used.
+            if (!usedDigits[digit]) {
+                // Check for leading zero violation.
+                if (digit == 0 && isFirstLetter(unassignedVariable)) {
+                    continue; // Skip this digit, as leading letters can't be zero.
+                }
+
+                // assign the digit to the current variable.
+                digitValues[unassignedVariable] = digit;
+
+                // Call solve() again to continue assigning digits to the unassigned variable.
+                solve(digitValues);
+
+                //After the recursive call returns, undo the assignment.
+                // It frees up the variable and the digit, allowing the loop
+                // to try the next digit for the current variable in the next iteration.
+                digitValues[unassignedVariable] = -1;
+            }
+        }
+    }
+
+    /**
+     * Helper method to check if a character is the first letter of any word.
+     * @param c The character to check.
+     * @return true if the character is a first letter, false otherwise.
+     */
+    private static boolean isFirstLetter(char c) {
+        // Check if the character is the first letter of the result word (and the word has more than one letter).
+        if (result.length() > 1 && result.charAt(0) == c)
+            return true;
+        // Loop through all the operand words.
+        for (String operand : operands) {
+            // Check if the character is the first letter of an operand (and the operand has more than one letter).
+            if (operand.length() > 1 && operand.charAt(0) == c) return true;
+        }
+        // If the character was not found as a leading letter in the result or any operand, return false.
+        return false;
     }
 }
