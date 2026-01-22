@@ -107,4 +107,32 @@ public class Prog03_03 {
 
     }
 
+    /*
+    Function to do operations on the array, such as sum, min, max, average and display it
+    
+    @param array the array to be processed
+    @return the sum, min, max, and average of the array
+     */
+    public static int[] arrayOperations(int[] array) {
+        int sum = 0;
+        int min = array[0];
+        int max = array[0];
+
+        for (int i = 0; i < array.length; i++) {
+            sum += array[i];
+
+            if (array[i] < min) {
+                min = array[i];
+            }
+
+            if (array[i] > max) {
+                max = array[i];
+            }
+        }
+
+        double average = (double) sum / array.length;
+
+        return new int[] {sum, min, max, (int) average};
+    }
+
 }
