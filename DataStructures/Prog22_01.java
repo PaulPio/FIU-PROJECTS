@@ -30,6 +30,24 @@ public class Prog22_01 {
         list.removeItemAt(0);
         System.out.print("After removing item at index 0: ");
         list.display();
-       
+
+
+        //Display length of linked list
+        System.out.println("Length of list: " + list.length()); 
+        
+        
+        //Test edge cases
+        System.out.println("Testing edge cases...");
+        list.insert(100, 0); //Insert at beginning
+        list.display(); //Display list
+
+        list.insert(100, list.length()); //Insert at end
+        list.display(); //Display list
+
+        list.removeItemAt(0); //Remove from beginning
+        list.removeItemAt(list.length() - 1); //Remove from end
+        list.removeItemAt(3); //Remove from 3rd index
+
+        list.display(); //Display list
     }
 }
