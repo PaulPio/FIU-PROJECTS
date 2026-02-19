@@ -41,7 +41,7 @@ import java.util.Random;
             //fill array with random values
             Random rnd=new Random(); //create random object
             for (int i=0;i<list.length;i++){ //loop through array
-                list[i]=rnd.nextInt(); //fill with random value
+                list[i]=rnd.nextInt(50); //fill with random value
             }
         }   
     }
