@@ -30,6 +30,21 @@ public class ArrayBag
      */
     public void add(String s)
     {
+        //check if array is full
+        if (length == size)
+        {
+          //create new array with double the size
+          String[] newBag = new String[size * 2];
+          //copy elements from old array to new array
+          for (int i = 0; i < length; i++)
+          {
+            newBag[i] = bag[i]; //copy element
+          }
+          bag = newBag; //set bag to new array
+          size *= 2; //double the size
+        }
+        bag[length] = s; //add new element
+        length++; //increment length
     }
 
     /**
@@ -41,6 +56,15 @@ public class ArrayBag
      */
     public int count(String s)
     {
+        int count = 0; //initialize count
+        for (int i = 0; i<length; i++) //iterate through the array
+        {
+            if (bag[i].equals(s)) //check if element is equal to s
+            {
+                count++; //increment count
+            }
+        }
+        return count; //return count
     }
 
     /**
@@ -50,6 +74,7 @@ public class ArrayBag
      */
     public int getNumberOfItems()
     {
+        return length; //return length
     }
 
     /**
@@ -59,6 +84,12 @@ public class ArrayBag
      */
     public boolean isEmpty()
     {
+        if (length == 0){
+            return true; //return true if bag is empty
+        }
+        else{
+            return false; //return false if bag is not empty
+        }
     }
 
     /**
@@ -71,6 +102,22 @@ public class ArrayBag
      */
     public void remove(String s)
     {
+        for (int i = 0; i<length; i++) //iterate through the array
+        {
+            if (bag[i].equals(s)) //check if element is equal to s
+            {
+                for(int j = i; j<length-1; j++) //Move everything after i one step to the left
+                {
+                    bag[j] = bag[j+1]; //remove element
+                }
+
+                bag[length-1] = null; //Clear the last item reference
+                length--; //decrement length
+                return; //exit loop, we only want to remove one item
+                
+            }
+
+        }
     }
 
     /**
@@ -82,6 +129,10 @@ public class ArrayBag
      */
     public void removeAll(String s)
     {
+        //keep removing the element until it is no longer in the bag
+        while(count(s)>0){
+            remove(s); //remove one occurrence of the element
+        }
     }
 
     /**
