@@ -5,3 +5,27 @@
 .idea
 */.idea/workspace.xml
 .idea/workspace.xml
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+*.tar
+*.gz
+*.bz2
+*.7z
+*.log
+*.lock
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+*.tar
+*.gz
+*.bz2
+*.7z
+*.log
+*.lock

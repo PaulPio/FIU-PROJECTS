@@ -1,0 +1,29 @@
+NUMBER_OF_ITEMS
+IS_EMPTY
+ADD Cabbage
+ADD Cucumber
+ADD Broccoli
+COUNT Cucumber
+ADD Banana
+ADD Broccoli
+ADD Guava
+ADD Cucumber
+NUMBER_OF_ITEMS
+REMOVEALL Cucumber
+REMOVE Cabbage
+ADD Guava
+REMOVE Coconut
+ADD Guava
+COUNT Guava
+REMOVE Banana
+REMOVE Guava
+ADD Orange
+COUNT Banana
+REMOVE Orange
+REMOVE Broccoli
+REMOVE Broccoli
+REMOVE Broccoli
+IS_EMPTY
+REMOVEALL Guava
+IS_EMPTY
+NUMBER_OF_ITEMS
