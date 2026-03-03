@@ -44,4 +44,65 @@ import java.util.Random;
                 list[i]=rnd.nextInt(50); //fill with random value
             }
         }   
+
+        /** 
+         * binary search O(log n), because the the search get divided in half each time
+         * 
+         * @param list
+         * @param x
+         * @return
+         */
+        public static boolean binarySearch(int[] list, int x){
+            int low = 0;
+            int n = list.length;
+            int high = n -1;
+            int pivot;
+
+            boolean found = false;
+
+            long startTime = System.nanoTime();
+
+            while(low <= high && !found ){
+                pivot = (low + high) / 2;
+                if (list[pivot] == x){
+                    found = true;
+                }
+                else{
+                    if (x<list[pivot] ){
+                        high = pivot - 1;
+                    }
+                    else{
+                        low = pivot + 1;
+                    }
+                }
+            }
+            long endTime = System.nanoTime();
+            System.out.println("Binary search time: " + (endTime - startTime) + " nanoseconds");
+            return found;
+        }
+
+        /**
+         * sequential search algorithm O(n)
+         * @param list
+         * @param x
+         * @return
+         */
+
+        public static boolean sequentialSearch(int[] list, int x){
+            boolean found = false;
+            int n = list.length;
+            long startTime = System.nanoTime();
+
+
+            for (int i = 0; i < n && !found; i++){
+                if (list[i] ==x){
+                    found = true;
+                }
+            }
+
+            long endTime = System.nanoTime();
+            System.out.println("Sequential search time: " + (endTime - startTime) + " nanoseconds");
+            return found;
+        }
+
     }
