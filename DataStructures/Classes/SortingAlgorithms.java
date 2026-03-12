@@ -22,6 +22,92 @@ import java.util.Random;
         }
 
         /**
+         * Function to sort an array using quicksort recursive method
+         * @param list give array
+         * @param start low index
+         * @param end high index / pivot index
+         */
+        public static void quicksort(int [] list, int start, int end){
+            if ( end <= start ) return;//base case
+
+            int pivot = partition(list, start, end); 
+            quicksort(list, start, pivot-1); // sorting left side of final position pivot/end
+            quicksort(list, pivot+1, end); // sorting right side of final position pivot/end
+
+        }
+
+        /*
+        * Helper function to get the pivot for quicksort and swap places inside the array
+        * @param list give array
+        * @param start low index
+        * @param end high index / pivot index
+        */
+       public static int partition(int [] list, int start, int end){
+        int pivot = list[end]; //pivot is the last element
+        int i = start - 1; 
+        for (int j = start; j<=end -1 ; j++){
+            if (list[j] < pivot){
+                i++;
+                int temp = list[i];
+                list[i] = list[j];
+                list[j] = temp;
+            }
+        }
+
+        i++;
+
+        int temp = list[i];
+        list[i] = list[end];
+        list[end] = temp;
+        
+        return i;
+
+        }
+
+
+        /**
+         * function that sorts an array using insertion sort algorithm
+         * the sorting algorithm starts by comparing the element at index 1
+         * with the one before, if lower continues with index2, if higher,
+         * then swaps the elemnet and continues with the next index  
+         * @param list array to sort
+         */
+
+        public static void insertionsort(int [] list){
+            for (int i = 1; i< list.length; i++){
+                int temp = list[i];
+                int j = i-1; // to compare value left of i
+
+                
+                while(j>= 0 && list[j] > temp){
+                    list[j+1] = list[j]; // shift element to the right
+                    j--;
+                }
+
+                list[j+1] = temp;
+            }
+        }
+
+/**
+ * Sorts given array using selection sort algorithm. Array assumed to be full
+ * @param list
+ */
+        public static void selectionSort(int[] array) {
+		for(int i = 0; i < array.length - 1; i++) {
+			int min = i;
+			for(int j = i + 1; j < array.length; j++) {
+				if(array[min] > array[j]) {
+					min = j;
+				}
+			}
+			int temp = array[i];
+			array[i] = array[min];
+			array[min] = temp;
+            }
+		}
+		
+	
+        /**
          * Print given array. Array is assumed to be full 
          * @param list give array
          */

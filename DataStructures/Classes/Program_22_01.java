@@ -20,6 +20,7 @@ public class Program_22_01 {
         bst.display();
         bst.preorderDisplay();
         bst.postorderDisplay();
-        System.out.println(bst.toString());
+        System.out.println(bst.getHeight());
+       // System.out.println(toString(bst));
     }
 }

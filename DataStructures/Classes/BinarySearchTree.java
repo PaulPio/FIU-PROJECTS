@@ -183,7 +183,7 @@ public class BinarySearchTree
      * @param p Node to be checked
      * @return height of the tree
      */
-    private int getHeight(Node p){
+    public int getHeight(Node p){
         if (p == null)
             return -1;
         else
