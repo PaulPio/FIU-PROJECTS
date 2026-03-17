@@ -13,6 +13,8 @@ public class Program_22_01 {
         bst.add(12);
         bst.add(18);
         bst.add(1); 
+        bst.add(1); 
+
         bst.display();
         System.out.println(bst.getMin());
         System.out.println(bst.contains(10));
@@ -21,6 +23,13 @@ public class Program_22_01 {
         bst.preorderDisplay();
         bst.postorderDisplay();
         System.out.println(bst.getHeight());
-       // System.out.println(toString(bst));
+        System.out.println(bst.toString());
+
+        System.out.println(bst.getCount());
+
+        System.out.println(bst.count(80));
+        System.out.println(bst.getMax());
+
+
     }
 }

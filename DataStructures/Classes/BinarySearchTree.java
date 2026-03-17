@@ -170,6 +170,14 @@ public class BinarySearchTree
             return s;
     }
 
+    /**
+     * Function to convert the tree to a string
+     * @return String representation of the tree
+     */
+    public String toString(){
+        return toString(root.getLeftChild());
+    }
+
     /*
      * Function to get the height of the tree
      * @return height of the tree
@@ -185,8 +193,78 @@ public class BinarySearchTree
      */
     public int getHeight(Node p){
         if (p == null)
-            return -1;
+            return -1; // if counting nodes and not edges, return 0
         else
             return 1 + Math.max(getHeight(p.getLeftChild()), getHeight(p.getRightChild()));
+    }
+
+    /**
+     * function to count how many nodes we have on the tree
+        @param p Node to be checked
+     * @return count of the Nodes on the tree
+     */
+    private int getCount(Node p){
+        if (p == null)
+            return 0; // return 0 if there are no more nodes, given that p is null when nothing was added, null is the value
+        // of the first dummy node
+        else
+            return 1 + getCount(p.getLeftChild()) + getCount(p.getRightChild()); // return 1 + the count of the left child 
+        //+ the count of the right child, 1 is to count the current Node, then we sum for the rest
+    }
+
+    /**
+     * public functton to run the getCount function
+     * @return the count of the nodes in the tree
+     */
+    public int getCount(){
+        return getCount(root.getLeftChild()); // recursive call to the private getCount function
+    }
+
+    /**
+     * private function to count(int x)
+     * @param x
+     * @return the number of times x shows up in the node
+     */
+    private int count(int x, Node p){
+        if (p== null){ // if there are no items in the node, then return 0 or if there were no values found
+            return 0;
+        }
+        else if (p.getInfo() == x){ // compare if current node matches x, if yes, sum 1 and continue the search
+            return ( 1 + count(x, p.getRightChild()));
+        }
+        else if (x < p.getInfo()){ //start searching through the left child of the node
+            return (count(x, p.getLeftChild()));
+        }
+        
+        else{ //start searching through the left child of the node
+            return (count(x, p.getRightChild()));
+        }
+    }
+    
+
+    /*
+    Public function to of Count method
+    @return the number of times x shows up in the node
+    */
+
+    public int count(int x){
+        return count(x, root.getLeftChild());
+    }
+
+
+    /*
+    gets the maximum value of a node
+    do not use recursion
+    @return the maximum value on the node
+     */
+    public int getMax(){
+        Node p = root.getLeftChild();
+
+        if (p==null) return -1;
+        else{
+            while (p.getRightChild() != null)
+                p.getRightChild();
+            return p.getInfo();
+        }
     }
 }
