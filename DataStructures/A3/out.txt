@@ -1,0 +1,77 @@
+Test starts
+
+IS_EMPTY: false
+
+NUMBER_OF_STUDENTS: 29
+
+CHANGE_GRADE 9999 A
+ ID not found
+
+RETRIEVE 9999
+ ID does not exist
+
+ADD Daniel Bennett 9999 B
+ Student 9999 added
+
+NUMBER_OF_STUDENTS: 30
+
+RETRIEVE 9999
+     Daniel   Bennett   9999  B
+
+CHANGE_GRADE 9999 A
+ Grade changed completed
+
+RETRIEVE 9999
+     Daniel   Bennett   9999  A
+
+COUNT_GRADE A
+ There are 9 A's
+
+COUNT_GRADE B
+ There are 8 B's
+
+COUNT_GRADE C
+ There are 6 C's
+
+COUNT_GRADE D
+ There are 4 D's
+
+COUNT_GRADE F
+ There are 3 F's
+
+COUNT_GRADE W
+ There are 0 W's
+
+PRINT 
+   Matthew     Scott    412  B
+   Abigail    Wright    602  C
+  Isabella    Martin    905  B
+    Oliver    Taylor    998  D
+      Liam   Johnson   1023  A
+     Henry      Hall   1500  A
+    Elijah   Jackson   1833  F
+      Ella     Green   2233  C
+      Emma    Thomas   2341  A
+ Alexander     Young   2684  D
+  Benjamin     Clark   2999  B
+     James  Thompson   3320  D
+    Daniel     Lopez   3478  F
+   William    Harris   4102  C
+     Lucas       Lee   4875  F
+   Michael      King   5210  B
+  Scarlett     Baker   5409  A
+      Noah  Anderson   5690  C
+    Sophia     White   6201  A
+ Charlotte     Lewis   6540  C
+    Joseph     Adams   6781  D
+    Amelia    Walker   7103  B
+       Ava     Moore   7452  B
+       Mia    Garcia   7812  A
+     Emily      Hill   7999  A
+     David  Gonzalez   8310  B
+    Olivia  Martinez   8745  B
+    Harper     Allen   8892  C
+    Evelyn Hernandez   9301  A
+    Daniel   Bennett   9999  A
+
+Test ends

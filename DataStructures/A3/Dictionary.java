@@ -9,7 +9,7 @@ import java.util.Scanner;
  * The dictionary stores information on students. Precondition: all student ID's
  * are distinct.
  *
- * @author add here name, Panther ID, and class section of all authors
+ * @author Paul Piotrowski, 6568148, and COP3530 U01 U02 1261
  */
 public class Dictionary
 {
@@ -62,7 +62,7 @@ public class Dictionary
      */
     public void add(Student stu)
     {
-        //TO IMPLEMENT
+        bst.add(stu); // add a new binary search tree object, which is a student into the dictionary
     }
 
     /**
@@ -75,7 +75,7 @@ public class Dictionary
      */
     public boolean changeGrade(int ID, char grade)
     {
-        //TO IMPLEMENT
+        return bst.changeGrade(ID, grade);
     }
 
     /**
@@ -86,7 +86,7 @@ public class Dictionary
      */
     public int countGrade(char grade)
     {
-        //TO IMPLEMENT
+        return bst.countGrade(grade);
     }
 
     /**
@@ -97,7 +97,7 @@ public class Dictionary
      */
     public Student retrieve(int ID)
     {
-        //TO IMPLEMENT
+        return bst.retrieve(ID);
     }
 
     /**
@@ -107,7 +107,7 @@ public class Dictionary
      */
     public int getNumberOfStudents()
     {
-        //TO IMPLEMENT
+        return bst.getNumberOfStudents();
     }
 
     /**
@@ -117,7 +117,7 @@ public class Dictionary
      */
     public boolean isEmpty()
     {
-        //TO IMPLEMENT
+        return bst.isEmpty();
     }
 
     /**
